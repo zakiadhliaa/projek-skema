@@ -6,12 +6,11 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Pemasukan</title>
+    <title>pengeluaran</title>
   </head>
   <body>
   <body class="hold-transition sidebar-mini">
@@ -23,35 +22,22 @@
             <div class="content-header">
               <div class="container-fluid">
                 <div class="row mb-2">
-    <h1 class="text-center mb-4">Uang Masuk</h1>
+    <h1 class="text-center mb-4">Tambah Data Pengeluaran</h1>
     <div class="container">
         <div class="row justify-content-center">
             <diV class="col-8">
              <div class="card">
                 <div class="card-body">
-                    <form action="/updatepemasukan/{{ $data->id }}" method="post">
+                    <form action="/simpandata" method="post">
                         @csrf
                     <div class="mb-3">
-                         <label for="exampleInputEmail1" class="form-label">Minggu 1</label>
-                        <input type="number" name="minggu1" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->minggu1 }}">
+                         <label for="exampleInputEmail1" class="form-label">Nama Pengeluaran</label>
+                        <input type="text" name="keterangan" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                     <div class="mb-3">
-                         <label for="exampleInputEmail1" class="form-label">Minggu 2</label>
-                        <input type="number" name="minggu2" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->minggu2 }}">
-                    </div>
-                    <div class="mb-3">
-                         <label for="exampleInputEmail1" class="form-label">Minggu 3</label>
-                        <input type="number" name="minggu3" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->minggu3 }}">
-                    </div>
-                    <div class="mb-3">
-                         <label for="exampleInputEmail1" class="form-label">Minggu 4</label>
-                        <input type="number" name="minggu4" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->minggu4 }}">
-                    </div>
-                    <div class="mb-3">
-                         <label for="exampleInputEmail1" class="form-label">Keterangan</label>
-                        <input type="text" name="keterangan" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->keterangan }}">
-                    </div>
-
+                         <label for="exampleInputEmail1" class="form-label">Jumlah Pengeluaran</label>
+                        <input type="number" name="jbl_pengeluaran" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>          
                     <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </diV>

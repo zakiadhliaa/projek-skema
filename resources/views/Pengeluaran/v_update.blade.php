@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>siswa</title>
+    <title>pengeluaran</title>
   </head>
   <body class="hold-transition sidebar-mini">
     <div class="wrapper">
@@ -21,43 +21,22 @@
             <div class="content-header">
               <div class="container-fluid">
                 <div class="row mb-2">
-      <h1 class="text-center mb-4">Edit Data Siswa</h1>
+      <h1 class="text-center mb-4">Edit Data Pengeluaran</h1>
       <div class="container">
         <div class="row justify-content-center">
             <diV class="col-8">
              <div class="card">
                 <div class="card-body">
-                    <form action="/updatedata/{{ $data->id }}" method="post">
+                    <form action="/update/{{ $data->id }}" method="post">
                         @csrf
                     <div class="mb-3">
-                         <label for="exampleInputEmail1" class="form-label">Nisn</label>
-                        <input type="number" name="nisn" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->nisn }}">
+                         <label for="exampleInputEmail1" class="form-label">Keterangan</label>
+                        <input type="text" name="keterangan" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->keterangan }}">
                     </div>
                     <div class="mb-3">
-                         <label for="exampleInputEmail1" class="form-label">Nama Lengkap</label>
-                        <input type="text" name="nama" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->nama }}">
+                         <label for="exampleInputEmail1" class="form-label">Jumlah Pengeluaran</label>
+                        <input type="number" name="jbl_pengeluaran" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->jbl_pengeluaran }}">
                     </div>
-                    <div class="mb-3">
-                         <label for="exampleInputEmail1" class="form-label">Kelas</label>
-                        <input type="text" name="kelas" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->kelas }}">
-                    </div>
-                    <div class="mb-3">
-                         <label for="exampleInputEmail1" class="form-label">Jurusan</label>
-                        <input type="text" name="jurusan" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{ $data->jurusan }}">
-                    </div>
-                    <div class="mb-3">
-                         <label for="exampleInputEmail1" class="form-label">Jenis Kelamin</label>
-                         <select class="form-select" name="jeniskelamin" aria-label="Default select example">
-                                <option selected>{{ $data->jeniskelamin }}</option>
-                                <option value="Laki-laki">Laki-laki</option>
-                                <option value="Perempuan">Perempuan</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                         <label for="exampleInputEmail1" class="form-label">No.Telpon</label>
-                        <input type="number" name="telpon" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"value="{{ $data->telpon }}">
-                    </div>
-
                     <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </diV>

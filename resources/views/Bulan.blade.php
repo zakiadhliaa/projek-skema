@@ -28,10 +28,10 @@
 <div class="col-3">
     <div class="card" style="width: 18rem;">
         {{-- <img src="..." class="card-img-top" alt="..."> --}}
-        <div class="card-body">
+        <div class="card-body " style="background-color: rgb(11, 224, 224)">
           <h3 class="card-title">{{$b->bulan}}</h3>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="/bulan/{{$b->id}}" class="btn btn-primary">Go somewhere</a>
+          <p class="card-text">Rp.{{$b->total1 + $b->total2 + $b->total3 +$b->total4  }}</p>
+          <a href="/bulan/{{$b->id}}" class="btn btn-dark">Go somewhere</a>
         </div>
       </div>
 

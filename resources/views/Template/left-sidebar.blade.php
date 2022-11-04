@@ -8,11 +8,11 @@
     <div class="sidebar">
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <!--<div class="image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="Image">
-        </div>-->
+       <div class="image">
+          <img src="{{asset('images.png')}}" class="img-circle elevation-2" alt="Image">
+        </div>
         <div class="info">
-          <a href="" class="d-block">Welcome {{ auth()->user()->name }}</a>
+          <p style="color:aliceblue" class="d-block">Welcome {{ auth()->user()->name }}</p>
         </div>
       </div>
 
@@ -69,7 +69,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="{{ route('keluar') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Pengeluaran</p>
                 </a>

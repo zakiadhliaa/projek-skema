@@ -17,7 +17,7 @@ class SiswaController extends Controller
         if($request->has('search')){
             $data = Siswa::where('nama','LIKE', '%' .$request->search. '%')->paginate(6);
         }else{
-            $data = siswa::paginate(5);
+            $data = Siswa::paginate(5);
         }
         return view('Siswa.v_read', compact('data'));
     }
